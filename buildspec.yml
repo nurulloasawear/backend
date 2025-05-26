@@ -10,7 +10,6 @@ phases:
   build:
     commands:
       - echo Building backend image...
-      - cd src
       - docker build -t $REPOSITORY_URI:$IMAGE_TAG .
   post_build:
     commands:
