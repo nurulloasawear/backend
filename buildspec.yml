@@ -5,8 +5,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 413062433561.dkr.ecr.eu-north-1.amazonaws.com
-      - REPOSITORY_URI=413062433561.dkr.ecr.eu-north-1.amazonaws.com/networking-backend
-      - IMAGE_TAG=$(echo $CODEBUILD_BUILD_ID | cut -c 1-7)
+      - export REPOSITORY_URI=413062433561.dkr.ecr.eu-north-1.amazonaws.com/backend
+      - export IMAGE_TAG=$(echo $CODEBUILD_BUILD_ID | cut -c 1-7)
   build:
     commands:
       - echo Building backend image...
