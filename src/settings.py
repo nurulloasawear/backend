@@ -95,7 +95,7 @@ TEMPLATES = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5500",
+    "http://51.20.55.214/",
 ]
 WSGI_APPLICATION = 'src.wsgi.application'
 
